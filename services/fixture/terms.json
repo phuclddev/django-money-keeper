@@ -1,0 +1,58 @@
+[
+    {
+        "model": "services.term",
+        "pk": 1,
+        "fields": {
+            "name": "1 week",
+            "duration_days": 7
+        }
+    },
+    {
+        "model": "services.term",
+        "pk": 2,
+        "fields": {
+            "name": "2 weeks",
+            "duration_days": 14
+        }
+    },
+    {
+        "model": "services.term",
+        "pk": 3,
+        "fields": {
+            "name": "3 weeks",
+            "duration_days": 21
+        }
+    },
+    {
+        "model": "services.term",
+        "pk": 4,
+        "fields": {
+            "name": "1 month",
+            "duration_days": 30
+        }
+    },
+    {
+        "model": "services.term",
+        "pk": 5,
+        "fields": {
+            "name": "3 months",
+            "duration_days": 90
+        }
+    },
+    {
+        "model": "services.term",
+        "pk": 6,
+        "fields": {
+            "name": "6 months",
+            "duration_days": 180
+        }
+    },
+    {
+        "model": "services.term",
+        "pk": 7,
+        "fields": {
+            "name": "1 year",
+            "duration_days": 365
+        }
+    }
+]
