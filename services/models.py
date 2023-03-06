@@ -84,14 +84,12 @@ class User(BaseModel, AbstractUser):
             return False
 
     def as_dict(self, fields=None, exclude=None):
-        res = BaseModel.as_dict(self, ['phone_number', 'date_of_birth', 'gender', 'address', 'occupations',
-                                       'account_type', ])
+        res = BaseModel.as_dict(self, ['email', 'first_name', 'last_name', 'avatar', 'phone_number', 'date_of_birth',
+                                       'gender', 'address', 'occupations', 'account_type', ])
         return res
 
     User._meta.get_field('is_active').verbose_name = 'Active'
     User._meta.get_field('is_superuser').verbose_name = 'Admin'
-    User._meta.get_field('first_name').verbose_name = 'First Name'
-    User._meta.get_field('last_name').verbose_name = 'Last Name'
 
 
 class Account(BaseModel, models.Model):

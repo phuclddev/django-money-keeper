@@ -1,0 +1,92 @@
+2023-03-03 09:56:07.358|ERROR|18809:123145431322624|logger.py:75|logger._append_exc|google_oauth2_callback_exception
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 885, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 80, in _worker
+    work_item.run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 248, in _run_event_loop
+    loop.run_until_complete(coro)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 571, in run_until_complete
+    self.run_forever()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 539, in run_forever
+    self._run_once()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1775, in _run_once
+    handle._run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 73, in _func
+    log.exception('%s_exception', func.__name__)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 67, in _func
+    response = await func(request, *args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 448, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/tasks.py", line 388, in wait_for
+    return await fut
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/current_thread_executor.py", line 22, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 490, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/api/users.py", line 55, in google_oauth2_callback
+    user = User.objects.get(username=email)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 190, in __get__
+    cls._meta.swapped,
+AttributeError: Manager isn't available; 'auth.User' has been swapped for 'services.User'
+
+2023-03-03 09:58:49.881|ERROR|18895:123145534226432|users.py:113|users._get_user_info|Cannot get token from code: 4/0AWtgzh6DUvGKYoEpLljFM4QXN2Voo-LDPRnkwqKWkGjANds_QiUhOkh1XJHgxraMkCHP9A, {'error': 'invalid_grant', 'error_description': 'Bad Request'}
+2023-03-03 09:58:49.881|ERROR|18895:123145534226432|users.py:50|users.google_oauth2_callback|Cannot get user info from token. Received data from Google {}
+2023-03-03 10:04:40.531|ERROR|18973:123145562128384|users.py:113|users._get_user_info|Cannot get token from code: 4/0AWtgzh4yeHYEsh0yfNgEmypi1pwPXMxVBQ5RBm2x5v0EYSMji9msL9GAj9S-qOUpSuqBiA, {'error': 'invalid_grant', 'error_description': 'Bad Request'}
+2023-03-03 10:04:40.531|ERROR|18973:123145562128384|users.py:50|users.google_oauth2_callback|Cannot get user info from token. Received data from Google {}
+2023-03-03 10:08:37.940|ERROR|19048:123145421144064|users.py:112|users._get_user_info|Cannot get token from code: 4/0AWtgzh49BRtTj-l6mBikYM1Ee2jssg0gIuW7D-MTYHAjNQKZiTZW_YVC7qk0ysndkfUFYw, {'error': 'invalid_grant', 'error_description': 'Bad Request'}
+2023-03-03 10:08:37.941|ERROR|19048:123145421144064|users.py:50|users.google_oauth2_callback|Cannot get user info from token. Received data from Google {}
+2023-03-03 10:11:03.309|ERROR|19087:123145461018624|logger.py:75|logger._append_exc|google_oauth2_callback_exception
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 885, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 80, in _worker
+    work_item.run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 248, in _run_event_loop
+    loop.run_until_complete(coro)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 571, in run_until_complete
+    self.run_forever()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 539, in run_forever
+    self._run_once()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1775, in _run_once
+    handle._run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 306, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 73, in _func
+    log.exception('%s_exception', func.__name__)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 69, in _func
+    response = func(request, *args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/api/users.py", line 55, in google_oauth2_callback
+    user = User.objects.get(username=email)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1173, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/utils/asyncio.py", line 31, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+

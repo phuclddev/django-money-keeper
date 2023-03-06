@@ -3,7 +3,11 @@ from .constants import *
 import json
 from datetime import date as date_type, time as time_type
 from django.db.models.fields.files import FieldFile
-
+import requests
+import traceback
+from django.urls import reverse
+from common.logger import log
+from django.conf import settings
 
 def dict_to_json(data, fields=None, exclude=None, **kwargs):
     """
@@ -57,7 +61,72 @@ def objects_to_json(objects):
         objects_list.append(object_json)
     return objects_list
 
+# Utils for Google login
+def _get_user_info(code):
+    ret_val = {}
+    if code is None:
+        log.error('No code, redirect to Login url')
+        return ret_val
 
+    GOOGLE = settings.GOOGLE
+    data = {
+        'code': code,
+        'client_id': GOOGLE['CLIENT_ID'],
+        'client_secret': GOOGLE['CLIENT_SECRET'],
+        'redirect_uri': _login_url(),
+        'grant_type': 'authorization_code'
+    }
+    get_token_url = 'https://www.googleapis.com/oauth2/v4/token'
+    token_in_dict = {}
+    try:
+        r = requests.post(
+            get_token_url,
+            data=data,
+            verify=False
+        )
+        token_in_dict = r.json()
+    except Exception as e:
+        log.error('Cannot get token from code. Exception: %s', str(e))
+        return ret_val
+
+    id_token = token_in_dict.get('id_token', None)
+    if id_token is None:
+        log.error('Cannot get token from code: %s, %s', code, token_in_dict)
+        return ret_val
+
+    # Else:
+    get_user_info_url = 'https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=%s' % (
+        id_token
+    )
+    try:
+        r = requests.get(get_user_info_url, verify=False)
+        ret_val = r.json()
+    except Exception as e:
+        log.error(
+            'Cannot get user info from token: %s. Exception: %s, %s',
+            id_token,
+            str(e),
+            traceback.format_exc()
+        )
+        return ret_val
+
+    return ret_val
+
+
+def _login_url():
+    login_callback_path = reverse('login-callback')
+    return remove_double_slashes(settings.HOME_PAGE + '/' + login_callback_path)
+
+
+def remove_double_slashes(url):
+    ret_val = ''
+    parts = url.split('://')
+    return '://'.join([part.replace('//', '/') for part in parts])
+
+
+def _home():
+    return remove_double_slashes(settings.HOME_PAGE + '/')
+# End Utils for Google login
 
 
 

@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from start.configs.db import DATABASES, DB_TABLE_PREFIX
+from start.configs.auth import GOOGLE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,3 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, 'services', 'fixture'),
 ]
+
+GOOGLE = GOOGLE
+HOME_PAGE = 'http://localhost:8000'

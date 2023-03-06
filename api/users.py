@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from services.models import User
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth.decorators import login_required
 from common.utils import api_response_data
@@ -11,118 +11,142 @@ from common.decorator import *
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from common.logger import log
+from django.contrib.auth import authenticate as django_authenticate, login as django_login, logout as django_logout
+from urllib import parse
+from django.shortcuts import redirect
+from common.utils import _get_user_info, _home, _login_url
+from common.utils import dict_to_json
+import re
+import datetime
 
 
-# @log_request()
-@require_http_methods(["GET"])
-def test(request):
-# Test Logging lib
-    log.error('This is log error')
-    log.info('This is log info')
-    log.exception('this is log exception')
-    log.warning('This is log warning')
-    log.data('This is log data')
-    log.fatal('This is log fatal')
-    return api_response_data({
-        "user": {
-            "id": 3,
-            "last_login": "2023-02-22 01:38:39",
-            "username": "user2",
-            "first_name": "",
-            "last_name": "",
-            "email": "",
-            "is_staff": "false",
-            "is_active": "true",
-            "date_joined": "2023-02-20 08:59:53",
-            "type": 2
-        }
-    }, SUCCESSFUL)
-    # return api_response_data({
-    #     "error": "error_not_logged_in"
-    # })
+DEFAULT_PASSWORD = '1'
+# Google Login -----------------------------------------------------------------
+@log_request()
+def login(request):
+    GOOGLE = settings.GOOGLE
+    login_url = '%s?client_id=%s&redirect_uri=%s&response_type=code&scope=%s&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value' % (
+        GOOGLE['BASE_URL'],
+        GOOGLE['CLIENT_ID'],
+        parse.quote(_login_url(), safe=''),
+        parse.quote(GOOGLE['SCOPE'], safe='')
+    )
+    # return
+    return redirect(login_url)
 
 
-# Content-Type: application/x-www-form-urlencoded
+@log_request()
+@sync_to_async()
+def logout(request):
+    django_logout(request)
+    return redirect(_home())
+
+
+@log_request()
+@sync_to_async()
+def google_oauth2_callback(request):
+    code = request.GET.get('code', None)
+    user_info_in_dict = _get_user_info(code)
+    log.info('Received user info from Google %s, code: %s', user_info_in_dict, code)
+    if user_info_in_dict.get('email', None) is None:
+        log.error('Cannot get user info from token. Received data from Google %s', user_info_in_dict)
+        return redirect(_home())
+
+    email = user_info_in_dict.get('email', None)
+    try:
+        user = User.objects.get(username=email)
+        user.nickname = user_info_in_dict.get('name', '')
+        user.first_name = user_info_in_dict.get('given_name', '')
+        user.last_name = user_info_in_dict.get('family_name', '')
+        user.avatar = user_info_in_dict.get('picture', '')
+        user.save()
+    except User.DoesNotExist:
+        user = User.objects.create_user(
+            username=email,
+            email=email,
+            password=DEFAULT_PASSWORD,
+            first_name=user_info_in_dict.get('given_name', ''),
+            last_name=user_info_in_dict.get('family_name', ''),
+            avatar=user_info_in_dict.get("picture", "")
+        )
+        user.is_staff = False
+        user.is_superuser = False
+        user.save()
+
+    user = django_authenticate(username=user.username, password=DEFAULT_PASSWORD)
+    print(user.username)
+    django_login(request, user)
+    log.info('Login successfully. User Id: %s', user.id)
+    return redirect(_home())
+
+
 @csrf_exempt
-@require_http_methods(["POST"])
-def my_login(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        user_name = user.get_username()
-        user_infos = user_manager.get_infos_json(user_name)
-        return api_response_data({
-        "user": user_infos,
-    }, SUCCESSFUL)
-    else:
-        return api_response_data({
-        "error": constants.ErrorCode.ERROR_INVALID_CREDENTIALS,
-    })
-
-
-def my_logout(request):
-    logout(request)
-    return HttpResponseRedirect('/')
-
-
 @my_login_required
-@require_http_methods(["GET"])
-def get(request):
+@require_http_methods(["GET", "POST"])
+@parse_params(user_update_schema, 'POST')
+def detail(request, body):
     user = request.user
-    user_name = user.get_username()
-    user_infos = user_manager.get_infos_json(user_name)
-    question = question_manager.get_question_by_user(user)
-    vote_history = question_manager.get_vote_history_by_user(user)
-    return api_response_data({
-        "user": user_infos,
-        "question": question,
-        "vote_history": vote_history,
-    }, SUCCESSFUL)
+    if request.method == 'GET':
+        log.info('Get user info successfully. User Id: %s', user.id)
+        return api_response_data({
+            "user": dict_to_json(user.as_dict()),
+        }, SUCCESSFUL)
+    elif request.method == 'POST':
+        phone_number = body.get('phone_number')
+        if phone_number is not None and not re.match(r'^\d{10}$', phone_number):
+            return api_response_data({
+            "error": constants.ErrorCode.ERROR_PHONE_NUMBER,
+        })
+        date_of_birth = body.get('date_of_birth')
+        birth_date = datetime.datetime.strptime(date_of_birth, '%Y-%m-%d').date()
+        if date_of_birth is not None and birth_date > datetime.date.today():
+            return api_response_data({
+            "error": constants.ErrorCode.ERROR_DATE_OF_BIRTH,
+        })
+        user_update = user_manager.user_update(user, body)
+        log.info('Update user info successfully. User Id: %s', user.id)
+        return api_response_data({
+            "user": user_update,
+        }, SUCCESSFUL)
+
+
+
 
 #
+# # Content-Type: application/x-www-form-urlencoded
 # @csrf_exempt
-# @my_login_required
 # @require_http_methods(["POST"])
-# @parse_params(question_create_schema)
-# def create_question(request, body):
-#     user_name = request.user.get_username()
-#     user = User.objects.get(username=user_name)
-#     if user_manager.check_user_type(user):
-#         question_created = question_manager.create_question(body, user)
+# def my_login(request):
+#     username = request.POST.get('username')
+#     password = request.POST.get('password')
+#     user = authenticate(request, username=username, password=password)
+#     if user is not None:
+#         login(request, user)
+#         user_name = user.get_username()
+#         user_infos = user_manager.get_infos_json(user_name)
 #         return api_response_data({
-#             "question_created": question_created,
-#         }, SUCCESSFUL)
+#         "user": user_infos,
+#     }, SUCCESSFUL)
 #     else:
 #         return api_response_data({
-#             "error_code": constants.ErrorCode.ERROR_BASIC_ACCOUNT,
-#         })
+#         "error": constants.ErrorCode.ERROR_INVALID_CREDENTIALS,
+#     })
 #
 #
-# @csrf_exempt
+# def my_logout(request):
+#     logout(request)
+#     return HttpResponseRedirect('/')
+#
+#
 # @my_login_required
-# @require_http_methods(["PUT"])
-# @parse_params(question_update_schema)
-# def update_question(request, body, id):
-#     if question_manager.check_question_owner(request.user, id):
-#         question_updated = question_manager.update_question(id, body)
-#         return api_response_data({
-#             "question_updated": question_updated,
-#         }, SUCCESSFUL)
-#     else: api_response_data({
-#             "error_code": constants.ErrorCode.ERROR_BASIC_ACCOUNT,
-#         })
-#
-#
-# @csrf_exempt
-# @my_login_required
-# @require_http_methods(["POST"])
-# @parse_params(vote_schema)
-# def vote(request, body):
-#     question = question_manager.get_question_by_id(body['question_id'])
-#     selected_choice = question_manager.get_choice_set_by_question_id(question, body['choice_id'])
-#     vote_created_info = question_manager.create_vote_history(question, request.user, selected_choice.choice_text)
+# @require_http_methods(["GET"])
+# def get(request):
+#     user = request.user
+#     user_name = user.get_username()
+#     user_infos = user_manager.get_infos_json(user_name)
 #     return api_response_data({
-#         "vote_created_info": vote_created_info,
+#         "user": user_infos,
 #     }, SUCCESSFUL)
+#
+#
+

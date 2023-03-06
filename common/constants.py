@@ -8,6 +8,8 @@ FAIL = 'fail'
 class ErrorCode(object):
     SUCCESS = 'success'
     ERROR_INVALID_CREDENTIALS = 'error_invalid_credentials'
+    ERROR_PHONE_NUMBER = 'error_phone_number_format'
+    ERROR_DATE_OF_BIRTH = 'error_date_of_birth_format'
     ERROR_NOT_LOGGED_IN = 'error_not_logged_in'
     ERROR_BASIC_ACCOUNT = 'error_basic_account'
     ERROR_QUESTION_NOT_OWNED = 'error_question_not_owned'

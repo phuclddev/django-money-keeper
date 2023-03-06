@@ -3,9 +3,12 @@ from api import users
 
 app_name = 'api'
 urlpatterns = [
-    path('login/callback/', users.google_oauth2_callback),
-    path('login/', users.login),
-    path('logout/', users.logout),
+    path('user/detail/', users.detail),
+    # path('account/get/', accounts.get),
+    # path('account/add/', accounts.add),
+    # path('login/callback/', users.google_oauth2_callback, name='login-callback'),
+    # path('login/', users.login),
+    # path('logout/', users.logout),
     # path('auth/login/', users.my_login),
     # path('auth/logout/', users.my_logout),
     # path('user/get/', users.get),

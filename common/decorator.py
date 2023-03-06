@@ -13,22 +13,42 @@ import asyncio
 from django.core.cache import cache
 from django.conf import settings
 import collections
+from json.decoder import JSONDecodeError
+
+
+def response_http_400(request):
+    return defaults.bad_request(request, '')
 
 
 def response_http_404(request):
     return defaults.page_not_found(request, '')
 
 
-def parse_params(schema, error_handler=response_http_404):
+def response_http_500(request):
+    return defaults.server_error(request)
+
+
+def parse_params(schema, method='POST', error_handler=response_http_404):
     def _parse_params(func):
         @wraps(func)
         def wrapper(request, *args, **kwargs):
-            body = json.loads(request.body.decode("utf-8"))
-            draft_202012_validator = Draft202012Validator(schema)
-            if draft_202012_validator.is_valid(body):
+            if request.method == 'GET':
+                body = None
                 return func(request, body, *args, **kwargs)
-            else:
-                return error_handler(request)
+            elif request.method == method:
+                if not bool(request.body):
+                    return response_http_400(request)
+                else:
+                    try:
+                        body = json.loads(request.body.decode("utf-8"))
+                        draft_202012_validator = Draft202012Validator(schema)
+                        if draft_202012_validator.is_valid(body):
+                            return func(request, body, *args, **kwargs)
+                        else:
+                            return error_handler(request)
+                    except JSONDecodeError:
+                        log.info('Body param error while parsing data')
+                        return response_http_400(request)
         return wrapper
     return _parse_params
 
@@ -36,7 +56,6 @@ def parse_params(schema, error_handler=response_http_404):
 def my_login_required(func):
     @wraps(func)
     def wrapper(request, *args, **kwargs):
-        print(request.user.is_authenticated)
         if not request.user.is_authenticated:
             return api_response_data({'status': FAIL, 'payload': {'error_code': ErrorCode.ERROR_NOT_LOGGED_IN}})
         else:

@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api import users
+
 
 urlpatterns = [
-    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
+    path('login/callback/', users.google_oauth2_callback, name='login-callback'),
+    path('login/', users.login),
+    path('logout/', users.logout),
     path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
 ]
