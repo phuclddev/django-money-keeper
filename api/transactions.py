@@ -8,7 +8,7 @@ from django.views.decorators.http import require_http_methods
 from services.models import Account
 import os
 from services.models import Transaction, Image
-
+import datetime
 
 @csrf_exempt
 @my_login_required
@@ -43,8 +43,15 @@ def upload(request, account_id, transaction_id):
     transaction = Transaction.objects.get(id=transaction_id)
     image_urls = []
     for i, uploaded_file in enumerate(uploaded_files):
-        filename = f"{transaction_id}_{i}.jpg"
-        image = Image(transaction=transaction, image=uploaded_file, image_name=filename)
+        now = datetime.datetime.now()
+        time_string = now.strftime("%Y%m%d%H%M%S")
+        filename = f"{transaction_id}__{time_string}_{i}.jpg"
+        if not os.path.exists(os.path.join(settings.MEDIA_ROOT, str(transaction_id))):
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, str(transaction_id)))
+        file_path = os.path.join(settings.MEDIA_ROOT, str(transaction_id), filename)
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.read())
+        image = Image(transaction=transaction, image=file_path, image_name=filename)
         image.save()
         image_url = request.build_absolute_uri(image.image.url)
         image_urls.append(image_url)
