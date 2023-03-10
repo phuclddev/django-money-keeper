@@ -138,3 +138,7 @@ FIXTURE_DIRS = [
 
 GOOGLE = GOOGLE
 HOME_PAGE = 'http://localhost:8000'
+# Config Media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'

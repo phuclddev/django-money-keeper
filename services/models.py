@@ -6,6 +6,8 @@ from django.db.models.fields.files import FieldFile
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from django.core.validators import RegexValidator
+import os
+
 
 if settings.DB_TABLE_PREFIX == '':
     raise Exception('Invalid settings.DB_TABLE_PREFIX')
@@ -107,12 +109,15 @@ class Account(BaseModel, models.Model):
         ('USD', 'United States Dollar'),
     ]
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     initial_balance = models.DecimalField(max_digits=15, decimal_places=2)
     balance_name = models.CharField(max_length=255)
     balance_type = models.CharField(max_length=50, choices=BALANCE_TYPE_CHOICES)
     currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES)
     description = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.balance_name
 
 class Transaction(BaseModel, models.Model):
     INCOME = 'income'
@@ -168,7 +173,9 @@ class Transaction(BaseModel, models.Model):
     category = models.CharField(max_length=30, choices=CATEGORIES)
     description = models.TextField(blank=True)
     time = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(blank=True)
+
+    # def __str__(self):
+    #     return self.account.balance_name
 
     class Meta:
         ordering = ['-time']
@@ -224,3 +231,19 @@ class Saving(BaseModel, models.Model):
     interest_paid = models.CharField(max_length=50, choices=INTEREST_PAID_CHOICES)
     term_ended = models.CharField(max_length=50, choices=TERM_ENDED_CHOICES)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES)
+
+
+def transaction_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/transaction_<id>/<filename>
+    transaction_dir = f'transaction_{instance.transaction.id}'
+    if not os.path.exists(os.path.join(settings.MEDIA_ROOT, transaction_dir)):
+        os.makedirs(os.path.join(settings.MEDIA_ROOT, transaction_dir))
+    return os.path.join(transaction_dir, filename)
+
+
+class Image(models.Model):
+    transaction = models.ForeignKey(Transaction, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=transaction_directory_path)
+    image_name = models.CharField(max_length=255, default="default_name")
+
+

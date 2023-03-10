@@ -28,14 +28,14 @@ def response_http_500(request):
     return defaults.server_error(request)
 
 
-def parse_params(schema, method='POST', error_handler=response_http_404):
+def parse_params(schema, method=[], error_handler=response_http_404):
     def _parse_params(func):
         @wraps(func)
         def wrapper(request, *args, **kwargs):
             if request.method == 'GET':
                 body = None
                 return func(request, body, *args, **kwargs)
-            elif request.method == method:
+            elif request.method in method:
                 if not bool(request.body):
                     return response_http_400(request)
                 else:

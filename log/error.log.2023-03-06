@@ -1,0 +1,52 @@
+2023-03-06 08:18:49.956|ERROR|1956:123145395924992|logger.py:75|logger._append_exc|logout_exception
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 885, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 80, in _worker
+    work_item.run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 248, in _run_event_loop
+    loop.run_until_complete(coro)
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 571, in run_until_complete
+    self.run_forever()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 539, in run_forever
+    self._run_once()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1775, in _run_once
+    handle._run()
+  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 306, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 76, in _func
+    log.exception('%s_exception', func.__name__)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 72, in _func
+    response = func(request, *args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/api/users.py", line 37, in logout
+    django_logout(request)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/contrib/auth/__init__.py", line 149, in logout
+    request.session.flush()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py", line 335, in flush
+    self.delete()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py", line 103, in delete
+    self.model.objects.get(session_key=session_key).delete()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1173, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/utils/asyncio.py", line 31, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+

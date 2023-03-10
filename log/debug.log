@@ -1,210 +1,342 @@
-2023-03-06 07:25:19.187|DEBUG|(0.003) 
+2023-03-10 03:47:25.816|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 07:25:19.195|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:01:06.503|DEBUG|(0.001) 
+2023-03-10 03:47:25.877|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 03:47:55.061|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:01:06.507|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:11:09.246|DEBUG|(0.002) 
+2023-03-10 03:47:55.064|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:10:24.632|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:11:09.251|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:14:05.547|DEBUG|(0.000) 
+2023-03-10 04:10:24.638|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:19:15.777|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:14:05.552|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:16:36.311|DEBUG|(0.001) 
+2023-03-10 04:19:15.781|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:19:22.756|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:16:36.315|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:19:09.228|DEBUG|(0.001) 
+2023-03-10 04:19:22.761|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:19:41.939|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:19:09.232|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:22:38.914|DEBUG|(0.001) 
+2023-03-10 04:19:41.944|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:20:59.927|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:22:38.918|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:25:39.250|DEBUG|(0.001) 
+2023-03-10 04:20:59.932|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:26:35.155|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:25:39.254|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:27:28.566|DEBUG|(0.001) 
+2023-03-10 04:26:35.161|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:34:14.294|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:27:28.570|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:30:04.381|DEBUG|(0.001) 
+2023-03-10 04:34:14.298|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:34:19.105|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:30:04.385|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:30:26.504|DEBUG|(0.001) 
+2023-03-10 04:34:19.109|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:36:20.621|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:30:26.508|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:31:13.859|DEBUG|(0.001) 
+2023-03-10 04:36:20.625|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:37:44.645|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:31:13.862|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:32:18.685|DEBUG|(0.001) 
+2023-03-10 04:37:44.649|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:49:52.218|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:32:18.690|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:53:48.999|DEBUG|(0.001) 
+2023-03-10 04:49:52.224|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:50:27.773|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:53:49.004|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:56:43.279|DEBUG|(0.001) 
+2023-03-10 04:50:27.777|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 04:51:14.247|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:56:43.285|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 08:57:15.512|DEBUG|(0.001) 
+2023-03-10 04:51:14.252|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 06:38:02.415|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 08:57:15.516|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:00:42.277|DEBUG|(0.001) 
+2023-03-10 06:38:02.420|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 06:40:01.761|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:00:42.283|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:01:34.071|DEBUG|(0.001) 
+2023-03-10 06:40:01.766|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 06:40:27.809|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:01:34.076|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:05:45.171|DEBUG|(0.002) 
+2023-03-10 06:40:27.812|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 06:41:02.055|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:05:45.175|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:06:06.400|DEBUG|(0.001) 
+2023-03-10 06:41:02.059|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 08:41:52.039|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:06:06.405|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:07:32.527|DEBUG|(0.001) 
+2023-03-10 08:41:52.045|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 08:49:07.955|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:07:32.532|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:08:32.241|DEBUG|(0.001) 
+2023-03-10 08:49:07.961|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 08:49:31.222|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:08:32.247|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:09:35.954|DEBUG|(0.001) 
+2023-03-10 08:49:31.227|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 08:50:37.065|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:09:35.958|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 09:09:55.054|DEBUG|(0.001) 
+2023-03-10 08:50:37.070|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 08:50:43.872|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 09:09:55.059|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:05:34.928|DEBUG|(0.002) 
+2023-03-10 08:50:43.877|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 08:59:05.178|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:05:34.934|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:08:36.289|DEBUG|(0.002) 
+2023-03-10 08:59:05.185|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:00:41.019|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:08:36.294|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:09:18.786|DEBUG|(0.001) 
+2023-03-10 09:00:41.026|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:16:30.737|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:09:18.791|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:09:31.683|DEBUG|(0.001) 
+2023-03-10 09:16:30.743|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:59:27.342|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:09:31.687|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:17:02.130|DEBUG|(0.001) 
+2023-03-10 09:59:27.347|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:59:41.287|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:17:02.135|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:19:37.808|DEBUG|(0.001) 
+2023-03-10 09:59:41.290|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:59:41.291|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:19:37.812|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:22:01.588|DEBUG|(0.001) 
+2023-03-10 09:59:41.292|DEBUG|(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:59:41.305|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:22:01.592|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:25:30.269|DEBUG|(0.001) 
+2023-03-10 09:59:41.305|DEBUG|(0.000) PRAGMA foreign_keys = OFF; args=None
+2023-03-10 09:59:41.305|DEBUG|(0.000) PRAGMA foreign_keys; args=None
+2023-03-10 09:59:41.305|DEBUG|(0.000) BEGIN; args=None
+2023-03-10 09:59:41.315|DEBUG|CREATE TABLE "new__services_transaction" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "type" varchar(20) NOT NULL, "amount" decimal NOT NULL, "category" varchar(30) NOT NULL, "description" text NOT NULL, "time" datetime NOT NULL, "account_id" bigint NOT NULL REFERENCES "services_account" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "tool_user" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2023-03-10 09:59:41.316|DEBUG|(0.001) CREATE TABLE "new__services_transaction" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "type" varchar(20) NOT NULL, "amount" decimal NOT NULL, "category" varchar(30) NOT NULL, "description" text NOT NULL, "time" datetime NOT NULL, "account_id" bigint NOT NULL REFERENCES "services_account" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "tool_user" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+2023-03-10 09:59:41.317|DEBUG|INSERT INTO "new__services_transaction" ("id", "type", "amount", "category", "description", "time", "account_id", "user_id") SELECT "id", "type", "amount", "category", "description", "time", "account_id", "user_id" FROM "services_transaction"; (params ())
+2023-03-10 09:59:41.318|DEBUG|(0.001) INSERT INTO "new__services_transaction" ("id", "type", "amount", "category", "description", "time", "account_id", "user_id") SELECT "id", "type", "amount", "category", "description", "time", "account_id", "user_id" FROM "services_transaction"; args=()
+2023-03-10 09:59:41.318|DEBUG|DROP TABLE "services_transaction"; (params ())
+2023-03-10 09:59:41.319|DEBUG|(0.001) DROP TABLE "services_transaction"; args=()
+2023-03-10 09:59:41.324|DEBUG|ALTER TABLE "new__services_transaction" RENAME TO "services_transaction"; (params ())
+2023-03-10 09:59:41.326|DEBUG|(0.001) ALTER TABLE "new__services_transaction" RENAME TO "services_transaction"; args=()
+2023-03-10 09:59:41.326|DEBUG|CREATE INDEX "services_transaction_account_id_e0bc42dc" ON "services_transaction" ("account_id"); (params ())
+2023-03-10 09:59:41.326|DEBUG|(0.000) CREATE INDEX "services_transaction_account_id_e0bc42dc" ON "services_transaction" ("account_id"); args=()
+2023-03-10 09:59:41.326|DEBUG|CREATE INDEX "services_transaction_user_id_338b518f" ON "services_transaction" ("user_id"); (params ())
+2023-03-10 09:59:41.327|DEBUG|(0.000) CREATE INDEX "services_transaction_user_id_338b518f" ON "services_transaction" ("user_id"); args=()
+2023-03-10 09:59:41.336|DEBUG|CREATE TABLE "services_image" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "image" varchar(100) NOT NULL, "transaction_id" bigint NOT NULL REFERENCES "services_transaction" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2023-03-10 09:59:41.337|DEBUG|(0.000) CREATE TABLE "services_image" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "image" varchar(100) NOT NULL, "transaction_id" bigint NOT NULL REFERENCES "services_transaction" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+2023-03-10 09:59:41.339|DEBUG|(0.002) PRAGMA foreign_key_check; args=None
+2023-03-10 09:59:41.340|DEBUG|CREATE INDEX "services_image_transaction_id_64788834" ON "services_image" ("transaction_id"); (params ())
+2023-03-10 09:59:41.340|DEBUG|(0.000) CREATE INDEX "services_image_transaction_id_64788834" ON "services_image" ("transaction_id"); args=()
+2023-03-10 09:59:41.341|DEBUG|(0.000) PRAGMA foreign_keys = ON; args=None
+2023-03-10 09:59:41.342|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:25:30.273|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:26:10.884|DEBUG|(0.001) 
+2023-03-10 09:59:41.343|DEBUG|(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('services', '0002_auto_20230310_0959', '2023-03-10 09:59:41.342379'); args=['services', '0002_auto_20230310_0959', '2023-03-10 09:59:41.342379']
+2023-03-10 09:59:41.344|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:26:10.888|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:38:42.464|DEBUG|(0.002) 
+2023-03-10 09:59:41.344|DEBUG|(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 09:59:41.359|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'services'; args=('services',)
+2023-03-10 09:59:41.359|DEBUG|(0.000) BEGIN; args=None
+2023-03-10 09:59:41.360|DEBUG|(0.000) INSERT INTO "django_content_type" ("app_label", "model") SELECT 'services', 'image'; args=('services', 'image')
+2023-03-10 09:59:41.362|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'user') LIMIT 21; args=('services', 'user')
+2023-03-10 09:59:41.363|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'account') LIMIT 21; args=('services', 'account')
+2023-03-10 09:59:41.364|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'bank') LIMIT 21; args=('services', 'bank')
+2023-03-10 09:59:41.365|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'term') LIMIT 21; args=('services', 'term')
+2023-03-10 09:59:41.366|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'transaction') LIMIT 21; args=('services', 'transaction')
+2023-03-10 09:59:41.367|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'saving') LIMIT 21; args=('services', 'saving')
+2023-03-10 09:59:41.368|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'image') LIMIT 21; args=('services', 'image')
+2023-03-10 09:59:41.392|DEBUG|(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1, 2, 3, 4, 5, 6, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1, 2, 3, 4, 5, 6, 12)
+2023-03-10 09:59:41.393|DEBUG|(0.000) BEGIN; args=None
+2023-03-10 09:59:41.395|DEBUG|(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add image', 12, 'add_image' UNION ALL SELECT 'Can change image', 12, 'change_image' UNION ALL SELECT 'Can delete image', 12, 'delete_image' UNION ALL SELECT 'Can view image', 12, 'view_image'; args=('Can add image', 12, 'add_image', 'Can change image', 12, 'change_image', 'Can delete image', 12, 'delete_image', 'Can view image', 12, 'view_image')
+2023-03-10 09:59:41.397|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'services'; args=('services',)
+2023-03-10 09:59:41.398|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+2023-03-10 09:59:41.399|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry')
+2023-03-10 09:59:41.400|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+2023-03-10 09:59:41.401|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+2023-03-10 09:59:41.402|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+2023-03-10 09:59:41.402|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission')
+2023-03-10 09:59:41.403|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group')
+2023-03-10 09:59:41.405|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9)
+2023-03-10 09:59:41.406|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+2023-03-10 09:59:41.406|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+2023-03-10 09:59:41.407|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype')
+2023-03-10 09:59:41.409|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(10,)
+2023-03-10 09:59:41.409|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+2023-03-10 09:59:41.410|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+2023-03-10 09:59:41.410|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session')
+2023-03-10 09:59:41.412|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11,)
+2023-03-10 09:59:41.412|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+2023-03-10 09:59:50.849|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:38:42.470|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:40:45.374|DEBUG|(0.001) 
+2023-03-10 09:59:50.853|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:02:00.873|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:40:45.378|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:41:25.816|DEBUG|(0.000) 
+2023-03-10 10:02:00.877|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:02:44.957|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:41:25.819|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:41:52.940|DEBUG|(0.001) 
+2023-03-10 10:02:44.962|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:04:28.567|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:41:52.944|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:49:59.343|DEBUG|(0.000) 
+2023-03-10 10:04:28.572|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:05:15.597|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:49:59.347|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:50:20.425|DEBUG|(0.001) 
+2023-03-10 10:05:15.600|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:09:58.756|DEBUG|(0.001) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:50:20.431|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:52:45.168|DEBUG|(0.001) 
+2023-03-10 10:09:58.760|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:10:21.435|DEBUG|(0.002) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:52:45.173|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:53:19.450|DEBUG|(0.001) 
+2023-03-10 10:10:21.441|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:10:37.811|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:53:19.455|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
-2023-03-06 10:53:45.664|DEBUG|(0.001) 
+2023-03-10 10:10:37.813|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:10:37.814|DEBUG|(0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
-2023-03-06 10:53:45.669|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:10:37.815|DEBUG|(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:10:37.827|DEBUG|(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:10:37.827|DEBUG|(0.000) PRAGMA foreign_keys = OFF; args=None
+2023-03-10 10:10:37.827|DEBUG|(0.000) PRAGMA foreign_keys; args=None
+2023-03-10 10:10:37.827|DEBUG|(0.000) BEGIN; args=None
+2023-03-10 10:10:37.834|DEBUG|CREATE TABLE "new__services_image" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "image" varchar(100) NOT NULL, "transaction_id" bigint NOT NULL REFERENCES "services_transaction" ("id") DEFERRABLE INITIALLY DEFERRED, "image_name" varchar(255) NOT NULL); (params None)
+2023-03-10 10:10:37.835|DEBUG|(0.001) CREATE TABLE "new__services_image" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "image" varchar(100) NOT NULL, "transaction_id" bigint NOT NULL REFERENCES "services_transaction" ("id") DEFERRABLE INITIALLY DEFERRED, "image_name" varchar(255) NOT NULL); args=None
+2023-03-10 10:10:37.835|DEBUG|INSERT INTO "new__services_image" ("id", "image", "transaction_id", "image_name") SELECT "id", "image", "transaction_id", 'default_name' FROM "services_image"; (params ())
+2023-03-10 10:10:37.836|DEBUG|(0.001) INSERT INTO "new__services_image" ("id", "image", "transaction_id", "image_name") SELECT "id", "image", "transaction_id", 'default_name' FROM "services_image"; args=()
+2023-03-10 10:10:37.836|DEBUG|DROP TABLE "services_image"; (params ())
+2023-03-10 10:10:37.837|DEBUG|(0.001) DROP TABLE "services_image"; args=()
+2023-03-10 10:10:37.844|DEBUG|ALTER TABLE "new__services_image" RENAME TO "services_image"; (params ())
+2023-03-10 10:10:37.846|DEBUG|(0.002) ALTER TABLE "new__services_image" RENAME TO "services_image"; args=()
+2023-03-10 10:10:37.847|DEBUG|CREATE INDEX "services_image_transaction_id_64788834" ON "services_image" ("transaction_id"); (params ())
+2023-03-10 10:10:37.847|DEBUG|(0.000) CREATE INDEX "services_image_transaction_id_64788834" ON "services_image" ("transaction_id"); args=()
+2023-03-10 10:10:37.847|DEBUG|(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:10:37.848|DEBUG|(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('services', '0003_image_image_name', '2023-03-10 10:10:37.848061'); args=['services', '0003_image_image_name', '2023-03-10 10:10:37.848061']
+2023-03-10 10:10:37.850|DEBUG|(0.002) PRAGMA foreign_key_check; args=None
+2023-03-10 10:10:37.852|DEBUG|(0.000) PRAGMA foreign_keys = ON; args=None
+2023-03-10 10:10:37.852|DEBUG|(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:10:37.853|DEBUG|(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:10:37.866|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'services'; args=('services',)
+2023-03-10 10:10:37.867|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'user') LIMIT 21; args=('services', 'user')
+2023-03-10 10:10:37.868|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'account') LIMIT 21; args=('services', 'account')
+2023-03-10 10:10:37.869|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'bank') LIMIT 21; args=('services', 'bank')
+2023-03-10 10:10:37.871|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'term') LIMIT 21; args=('services', 'term')
+2023-03-10 10:10:37.872|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'transaction') LIMIT 21; args=('services', 'transaction')
+2023-03-10 10:10:37.873|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'saving') LIMIT 21; args=('services', 'saving')
+2023-03-10 10:10:37.874|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'services' AND "django_content_type"."model" = 'image') LIMIT 21; args=('services', 'image')
+2023-03-10 10:10:37.877|DEBUG|(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1, 2, 3, 4, 5, 6, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1, 2, 3, 4, 5, 6, 12)
+2023-03-10 10:10:37.878|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'services'; args=('services',)
+2023-03-10 10:10:37.879|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+2023-03-10 10:10:37.879|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry')
+2023-03-10 10:10:37.881|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+2023-03-10 10:10:37.881|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+2023-03-10 10:10:37.882|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+2023-03-10 10:10:37.883|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission')
+2023-03-10 10:10:37.884|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group')
+2023-03-10 10:10:37.885|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9)
+2023-03-10 10:10:37.886|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+2023-03-10 10:10:37.887|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+2023-03-10 10:10:37.888|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype')
+2023-03-10 10:10:37.889|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(10,)
+2023-03-10 10:10:37.890|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+2023-03-10 10:10:37.890|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+2023-03-10 10:10:37.892|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session')
+2023-03-10 10:10:37.893|DEBUG|(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11,)
+2023-03-10 10:10:37.894|DEBUG|(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+2023-03-10 10:10:44.634|DEBUG|(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:10:44.641|DEBUG|(0.003) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:12:54.593|DEBUG|(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:12:54.598|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:13:43.295|DEBUG|(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:13:43.300|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:14:00.547|DEBUG|(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:14:00.553|DEBUG|(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+2023-03-10 10:14:44.142|DEBUG|(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2023-03-10 10:14:44.148|DEBUG|(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()

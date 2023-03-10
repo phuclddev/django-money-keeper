@@ -1,5 +1,5 @@
 from django.contrib import admin
-from services.models import User, Account, Transaction, Bank, Term, Saving
+from services.models import User, Account, Transaction, Bank, Term, Saving, Image
 
 
 @admin.register(User)
@@ -47,3 +47,8 @@ class TermAdmin(admin.ModelAdmin):
 @admin.register(Saving)
 class SavingAdmin(admin.ModelAdmin):
     list_display = ('id', 'initial_balance')
+
+
+@admin.register(Image)
+class SavingAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image_name')

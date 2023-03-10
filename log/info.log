@@ -1,87 +1,9 @@
-2023-03-06 08:13:31.874|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:16:38.761|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:17:27.775|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:17:29.156|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:17:29.724|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:17:30.223|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:18:38.825|INFO|Get user info successfully. User Id: 1
-2023-03-06 08:18:49.956|ERROR|logout_exception
-Traceback (most recent call last):
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 885, in _bootstrap
-    self._bootstrap_inner()
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
-    self.run()
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 80, in _worker
-    work_item.run()
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 57, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 248, in _run_event_loop
-    loop.run_until_complete(coro)
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 571, in run_until_complete
-    self.run_forever()
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 539, in run_forever
-    self._run_once()
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1775, in _run_once
-    handle._run()
-  File "/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py", line 88, in _run
-    self._context.run(self._callback, *self._args)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/asgiref/sync.py", line 306, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 76, in _func
-    log.exception('%s_exception', func.__name__)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/common/decorator.py", line 72, in _func
-    response = func(request, *args, **kwargs)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/api/users.py", line 37, in logout
-    django_logout(request)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/contrib/auth/__init__.py", line 149, in logout
-    request.session.flush()
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py", line 335, in flush
-    self.delete()
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py", line 103, in delete
-    self.model.objects.get(session_key=session_key).delete()
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 431, in get
-    num = len(clone)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 262, in __len__
-    self._fetch_all()
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
-    self._result_cache = list(self._iterable_class(self))
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
-    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1173, in execute_sql
-    cursor = self.connection.cursor()
-  File "/Users/phucluu/Documents/GitHub/django-money-keeper-api/venv/lib/python3.7/site-packages/django/utils/asyncio.py", line 31, in inner
-    raise SynchronousOnlyOperation(message)
-django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
-
-2023-03-06 08:19:46.820|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '102528949706236318012', 'hd': 'ved.com.vn', 'email': 'dinhphuc.luu@ved.com.vn', 'email_verified': 'true', 'at_hash': 'FR7TUApheZ2Nied1_vk91g', 'name': 'Phúc Lưu Đình', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxb9nEK7DwGleHJkmZq9xMlV-mvkqPDiOvoEFMGfvg=s96-c', 'given_name': 'Phúc', 'family_name': 'Lưu Đình', 'locale': 'en', 'iat': '1678090786', 'exp': '1678094386', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh4wYv7V1zge9gvUAV9Be5s_IL3zCqBJw0HIPkyJbaYUjDKV-i7ltkb7_zSXm0_i3A
-2023-03-06 08:19:47.216|INFO|Login successfully. User Id: 4
-2023-03-06 08:21:08.962|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '104975551021591622453', 'email': 'phucld.dev@gmail.com', 'email_verified': 'true', 'at_hash': 'Hk3jcmvLU08j9o4BQ-O_sw', 'name': 'Phuc Luu', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxYAkgWgkS-LvgqqvSR0Fv0dklhzlaWml6YahtzR=s96-c', 'given_name': 'Phuc', 'family_name': 'Luu', 'locale': 'vi', 'iat': '1678090868', 'exp': '1678094468', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh4KsPWTWHein5Y2PZIat3T3Qnd4P4W6v057YHyEUpj5NWUL4FCA2ti-0GZcm6bzJQ
-2023-03-06 08:21:09.164|INFO|Login successfully. User Id: 2
-2023-03-06 08:26:53.649|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '104562812737983970557', 'hd': 'ved.com.vn', 'email': 'hostmaster@ved.com.vn', 'email_verified': 'true', 'at_hash': 'Z1JRIUz2Bsui8I_iab0NKQ', 'name': 'SA Hostmaster', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxb4MBz1WNlkVZhs3LgYTfl17H5dfIhfyfJxzru2=s96-c', 'given_name': 'SA', 'family_name': 'Hostmaster', 'locale': 'vi', 'iat': '1678091213', 'exp': '1678094813', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh5gnMTuhTK_w2u39ZKQ1H8EzdWnKNaIBMS-3reDhXWYIlM4uTD5vfoSiLoOpc47yQ
-2023-03-06 08:26:54.035|INFO|Login successfully. User Id: 5
-2023-03-06 08:30:06.606|INFO|Get user info successfully. User Id: None
-2023-03-06 08:31:24.865|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '104975551021591622453', 'email': 'phucld.dev@gmail.com', 'email_verified': 'true', 'at_hash': '2GVR-w_zjAR4_8Emo3tEAA', 'name': 'Phuc Luu', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxYAkgWgkS-LvgqqvSR0Fv0dklhzlaWml6YahtzR=s96-c', 'given_name': 'Phuc', 'family_name': 'Luu', 'locale': 'vi', 'iat': '1678091484', 'exp': '1678095084', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh5lrAHsE4YckR38w6RaNbv2bXqWtcspXg-p85-NfeohFaLxe4JYi2VFDOOeDvsgDg
-2023-03-06 08:31:25.074|INFO|Login successfully. User Id: 2
-2023-03-06 08:32:32.828|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '104975551021591622453', 'email': 'phucld.dev@gmail.com', 'email_verified': 'true', 'at_hash': 'oh1GjwFlfo5Bloecq2hErA', 'name': 'Phuc Luu', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxYAkgWgkS-LvgqqvSR0Fv0dklhzlaWml6YahtzR=s96-c', 'given_name': 'Phuc', 'family_name': 'Luu', 'locale': 'vi', 'iat': '1678091552', 'exp': '1678095152', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh5Fl3_craYeM0RFJU8mybkpyfpxvWpORoOoXuzG12EMTCs7LN7_y7YqTijH7khzsQ
-2023-03-06 08:32:33.052|INFO|Login successfully. User Id: 2
-2023-03-06 08:45:04.483|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '104975551021591622453', 'email': 'phucld.dev@gmail.com', 'email_verified': 'true', 'at_hash': 'd1vU3TY44HSkqXd0lPiTcg', 'name': 'Phuc Luu', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxYAkgWgkS-LvgqqvSR0Fv0dklhzlaWml6YahtzR=s96-c', 'given_name': 'Phuc', 'family_name': 'Luu', 'locale': 'vi', 'iat': '1678092304', 'exp': '1678095904', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh64esqGkFHJSOeKwJi4UBlU-C7ZJA46J48ucfMOEWNxUW0i-Vv_EWctjlomcorGcA
-2023-03-06 08:45:04.689|INFO|Login successfully. User Id: 2
-2023-03-06 08:50:26.327|INFO|Received user info from Google {'iss': 'https://accounts.google.com', 'azp': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'aud': '228981541877-eu1up7ttd5f96e14qm95963klt8185j9.apps.googleusercontent.com', 'sub': '116891329041053586549', 'email': 'phucluu181@gmail.com', 'email_verified': 'true', 'at_hash': '-6CsjZ3SB0m_N7XPufMuDA', 'name': 'Phuc Luu', 'picture': 'https://lh3.googleusercontent.com/a/AGNmyxb9Jlolwypkwudc7TqC5Ai07ZSAYU69JVAmSDwL=s96-c', 'given_name': 'Phuc', 'family_name': 'Luu', 'locale': 'vi', 'iat': '1678092626', 'exp': '1678096226', 'alg': 'RS256', 'kid': '255cca6ec2810602d80bec89e456c4495d7418bb', 'typ': 'JWT'}, code: 4/0AWtgzh7tLyib42LbfWRNJO4ZKOW4lmyxmVGY0jNoQA5_OM3fDqeRraI717ymv_1KUW3TPg
-2023-03-06 08:50:26.534|INFO|Login successfully. User Id: 3
-2023-03-06 08:52:06.872|INFO|Get user info successfully. User Id: 3
-2023-03-06 08:53:26.621|INFO|Get user info successfully. User Id: 2
-2023-03-06 08:53:51.051|INFO|Get user info successfully. User Id: 2
-2023-03-06 08:54:13.698|INFO|Get user info successfully. User Id: 2
-2023-03-06 08:54:49.181|INFO|Get user info successfully. User Id: 2
-2023-03-06 08:54:58.232|INFO|Get user info successfully. User Id: 2
-2023-03-06 08:55:13.141|INFO|Get user info successfully. User Id: 2
-2023-03-06 10:05:52.573|INFO|Get user info successfully. User Id: 2
-2023-03-06 10:10:56.298|INFO|Get user info successfully. User Id: 2
-2023-03-06 10:26:14.018|INFO|Update user info successfully. User Id: 2
-2023-03-06 10:38:45.290|INFO|Update user info successfully. User Id: 2
-2023-03-06 10:40:48.901|INFO|Update user info successfully. User Id: 2
-2023-03-06 10:41:58.137|INFO|Update user info successfully. User Id: 2
+2023-03-10 03:47:29.690|ERROR|Error while creating transactions of User 2
+2023-03-10 03:47:57.751|ERROR|Error while creating transactions of User 2
+2023-03-10 04:10:27.805|ERROR|Error while creating transactions of User 2
+2023-03-10 04:19:44.525|INFO|Create transaction list successfully. User Id: 2
+2023-03-10 04:37:09.981|INFO|Create transaction list successfully. User Id: 2
+2023-03-10 04:49:54.761|INFO|Create transaction list successfully. User Id: 2
+2023-03-10 06:39:00.805|INFO|Put transaction list successfully. User Id: 2
+2023-03-10 06:41:11.877|INFO|Delete transaction successfully. User Id: 2
+2023-03-10 08:41:55.169|INFO|Create transaction list successfully. User Id: 2

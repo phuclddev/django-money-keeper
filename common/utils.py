@@ -8,22 +8,51 @@ import traceback
 from django.urls import reverse
 from common.logger import log
 from django.conf import settings
+from decimal import Decimal
+from django.db.models.fields.files import ImageFieldFile
 
-def dict_to_json(data, fields=None, exclude=None, **kwargs):
+
+# def dict_to_json(data, fields=None, exclude=None, **kwargs):
+#     """
+#     Return a JSON-dumpable dict
+#     """
+#     for attr in data:
+#         print(data[attr])
+#         if isinstance(data[attr], time_type):
+#             data[attr] = data[attr].strftime(kwargs.get('time_format', '%H:%M:%S'))
+#         elif isinstance(data[attr], date_type):
+#             data[attr] = data[attr].strftime(kwargs.get('date_format', '%Y-%m-%d %H:%M:%S'))
+#         elif isinstance(data[attr], FieldFile):
+#             file_data = {}
+#             for k in kwargs.get('file_attributes', ('url',)):
+#                 file_data[k] = data[attr].__getattribute__(k) if hasattr(data[attr], k) else ''
+#             data[attr] = file_data
+#         elif isinstance(data[attr], Decimal):
+#             data[attr] = float(data[attr])
+#         elif isinstance(data[attr], ImageFieldFile):
+#             file_data = {}
+#             for k in kwargs.get('file_attributes', ('url',)):
+#                 print(file_data[k])
+#                 file_data[k] = data[attr].__getattribute__(k) if hasattr(data[attr], k) else ''
+#             data[attr] = file_data
+#     return data
+
+def dict_to_json(data):
     """
-    Return a JSON-dumpable dict
+        Return a clean dict
     """
-    for attr in data:
-        if isinstance(data[attr], time_type):
-            data[attr] = data[attr].strftime(kwargs.get('time_format', '%H:%M:%S'))
-        elif isinstance(data[attr], date_type):
-            data[attr] = data[attr].strftime(kwargs.get('date_format', '%Y-%m-%d %H:%M:%S'))
-        elif isinstance(data[attr], FieldFile):
-            file_data = {}
-            for k in kwargs.get('file_attributes', ('url',)):
-                file_data[k] = data[attr].__getattribute__(k) if hasattr(data[attr], k) else ''
-            data[attr] = file_data
-    return data
+    for key, value in data.items():
+        if isinstance(value, time_type):
+            data[key] = value.strftime('%H:%M:%S')
+        elif isinstance(value, date_type):
+            data[key] = value.strftime('%Y-%m-%d %H:%M:%S')
+        elif isinstance(value, Decimal):
+            data[key] = float(value)
+        elif isinstance(value, ImageFieldFile):
+            data[key] = str(value)
+    # json_data = json.dumps(data)
+    json_data = data
+    return json_data
 
 
 def to_json(data, ensure_ascii=False, ensure_bytes=False, default=None):

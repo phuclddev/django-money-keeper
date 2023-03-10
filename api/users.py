@@ -82,8 +82,8 @@ def google_oauth2_callback(request):
 
 @csrf_exempt
 @my_login_required
-@require_http_methods(["GET", "POST"])
-@parse_params(user_update_schema, 'POST')
+@require_http_methods(["GET", "PUT"])
+@parse_params(user_update_schema, ['PUT'])
 def detail(request, body):
     user = request.user
     if request.method == 'GET':
@@ -91,7 +91,7 @@ def detail(request, body):
         return api_response_data({
             "user": dict_to_json(user.as_dict()),
         }, SUCCESSFUL)
-    elif request.method == 'POST':
+    elif request.method == 'PUT':
         phone_number = body.get('phone_number')
         if phone_number is not None and not re.match(r'^\d{10}$', phone_number):
             return api_response_data({
